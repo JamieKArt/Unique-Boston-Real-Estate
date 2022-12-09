@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <title>Unique Boston Real Estate | Josh Konoff</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta description="No one knows your real estate needs better than you. Let’s talk about them, and find the best fit for you. Josh Konoff is a seasoned real estate specialist with more than 8 years of experience. He is dedicated to building long-term relationships with clients and their referrals.  He has lived in the Allston-Brookline-Brighton area for 16 years.">
+        <link type="image/png" sizes="16x16" rel="icon" href="images/icons8-city-buildings-16.png">
+        <link type="image/png" sizes="32x32" rel="icon" href="images/icons8-city-buildings-32.png">
+        <link type="image/png" sizes="96x96" rel="icon" href="images/icons8-city-buildings-96.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Zilla+Slab:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <style>
+            * {
+              font-family: 'Raleway', sans-serif;
+            }
+            html {
+              min-width: 250px;
+              scroll-snap-type: y proximity;
+              scroll-behavior: smooth;
+            }
+            body {
+              scroll-snap-type: y proximity;
+              padding: 0;
+               margin: 0;
+              scroll-behavior: smooth;
+            }
+            h1 {
+              font-family: 'Zilla Slab', serif;
+            }
+            h2 {
+              font-family: 'Zilla Slab', serif;
+              font-weight: normal;
+              font-size: calc((2.8 - 1) * 1.2vw + 1rem);
+            }
+            h3, h4 {
+              font-family: 'Zilla Slab', serif;
+              font-size: calc((2.2 - 1) * 1.2vw + 1rem);
+              line-height: calc(1.4 * (1 + (1 - 2.2)/25));
+              font-weight: normal;
+            }
+            p {
+                font-size: calc((1.4 - 1) * 1.2vw + 1rem);
+            }
+            a {
+                color: #000;
+                text-decoration: none;
+                transition: opacity 0.5s;
+            }
+            a:hover {
+                opacity: 0.75;
+            }
+            a.sqs-button-element--primary {
+                padding: 1.3rem 2.171rem;
+                font-size: calc((.9 - 1) * 1.2vw + 1rem);
+                color: #fff;
+                background-color: #809db7;
+                width: fit-content;
+                display: block;
+                text-align: center;
+            }
+
+
+            header {
+              position: fixed;
+              top: 0;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              padding: 2vw 3vw;
+              box-sizing: border-box;
+              background-color: rgba(255,255,255,.75) !important;
+              backdrop-filter: blur(10px);
+              z-index: 10;
+            }
+            header h1 {
+              font-size: calc((2 - 1) * 1.2vw + 1rem);
+              font-weight: normal;
+              width: fit-content;
+              letter-spacing: -0.5px;
+          }
+            header ul {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+              align-items: center;
+              list-style: none;
+              padding: 0;
+              margin-right: 0;
+              margin-left: auto;
+              gap: 1em;
+          }
+            header ul li a {
+                font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+            }
+            header ul li a.icon {
+              height: 25px;
+              width: 25px;
+              display: block;
+              top: -2px;
+              position: relative;
+          }
+            #hero {
+              min-height: 100vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              padding: 7vw 4vw 0;
+              background-image: url(images/unique-boston-real-estate-banner.jpg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: 50%;
+              box-sizing: border-box;
+              position: relative;
+          }
+          #hero::before {
+              content: "";
+              position: absolute;
+              display: block;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              background-color: #000;
+              opacity: 0.25;
+          }
+            #hero h2 {
+              text-shadow: 0 1px 2px rgb(0 0 0 / 75%), 0 1px 5px rgb(0 0 0 / 35%);
+              color: #fff;
+              margin: 1rem;
+              position: relative;
+              font-size: calc((4 - 1) * 1.2vw + 1rem);
+          }
+          #hero p {
+            text-shadow: 0 1px 2px rgb(0 0 0 / 75%), 0 1px 5px rgb(0 0 0 / 35%);
+            color: #fff;
+            margin: 1rem 0;
+            position: relative;
+          }
+            #hero a.sqs-button-element--primary {
+              margin: 1rem 0;
+              box-shadow: 0 1px 15px rgb(0 0 0 / 50%);
+              position: relative;
+          }
+
+            #quote {
+              min-height: 66vh;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 0 10vw;
+          }
+            #quote h3 {
+                color: #809db7;
+            }
+
+            #meet-josh {
+              min-height: 33vh;
+              background-color: #e0dbd2;
+              padding: 10vw;
+              display: flex;
+              gap: 3em;
+          }
+            #meet-josh div img {
+              border-radius: 50%;
+          }
+            #meet-josh div h2 {
+              margin-top: 0;
+          }
+          #meet-josh div p {
+            font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+            line-height: 1.8;
+          }
+          #meet-josh div p a:not(a.sqs-button-element--primary) {
+            color: #809db7;
+            text-decoration: underline;
+          }
+          #listings {scroll-snap-align: center; padding-top: 8vw}
+          #listings a.sqs-button-element--primary {
+              margin: 5rem auto;
+          }
+            #testimonials {padding-top: 8vw}
+            #testimonials ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding: 0 20px;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+            #testimonials ul li {
+    width: 50%;
+    flex-shrink: 1;
+    box-sizing: border-box;
+    transform: none !important;
+    background-color: #e0dbd2;
+    padding: 5% !important;
+}
+            #testimonials .user-items-list-carousel__media-container {
+    margin: auto;
+}
+            #testimonials .user-items-list-carousel__media-container > div img {
+              border-radius: 50%;
+              aspect-ratio: 1;
+              object-fit: cover;
+            }
+            #testimonials h2 {
+              font-size: calc((1.1 - 1) * 5.2vw + 1rem);
+              line-height: 1.8;
+            }
+            #testimonials p {
+    font-size: 90%;
+}
+
+
+            #contact {
+    gap: 5vw;
+    padding: 5vw;
+    text-align: center;
+}
+            #contact > div {
+    width: 100%;
+}
+            #contact h2 {
+    color: #809db7;
+}
+            #contact p {
+    font-size: calc((1.1 - 1) * 1.2vw + 1rem);
+    line-height: 1.8;
+}
+            #contact nav {
+    text-indent: -0.7em;
+    margin-top: -1em;
+}
+            #contact nav a {
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-right: -0.6em;
+}
+            #contact nav a div svg {
+    display: block;
+}
+
+            #contact fieldset,
+            #contact div.form-item {
+    border: none;
+    padding: 0.25em 0 2em 0;
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+#contact .field-list {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#contact .field-list > * {
+  width: 100%;
+}
+#contact .field-list fieldset.checkbox,
+#contact .field-list fieldset.radio,
+#contact .field-list div.form-item.select {
+  width: 50%;
+  margin: 0;
+}
+#contact legend {
+    font-size: calc((1.1 - 1) * 2.2vw + 1rem) !important;
+}
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 6px 0 4px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+#contact input[type="radio"],
+#contact input[type="checkbox"] {
+  display: inline;
+  width: fit-content;
+}
+#contact select {
+    width: 90%;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 6px 0 4px;
+    max-width: 100%;
+}
+#contact span.caption-text {
+    display: block;
+    font-size: calc((.9 - 1) * 1.2vw + 1rem) !important;
+}
+#contact .option {
+  text-align: left;
+  width: 100%;
+}
+
+            footer {
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+}
+footer > * {
+  width: 33.3333%;
+}
+            footer h2 {
+    color: #fff;
+    font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+}
+            footer nav {
+    text-align: center;
+}
+            footer nav a {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+}
+            footer nav a div svg {
+    color: #fff;
+}
+            footer h4 {
+    margin: 0;
+}
+            footer h4 a {
+              color:#809db7;
+              text-decoration: underline;
+              font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+    font-family: 'Zilla Slab', serif;
+            }
+            
+
+
+
+            @media screen and (max-width: 899px) {
+              .desktop-only {
+                display: none;
+              }
+              header {
+                flex-direction: column;
+                position: relative;
+                padding: 0vw 3vw
+              }
+              header ul {
+                justify-content: center;
+                margin-right: auto;
+              }
+              header ul li {
+                order: 2;
+              }
+              header ul li:last-child {
+                order: 1;
+                width: 100%;
+              }
+              
+              header ul li:last-child a {
+                margin: auto;
+              }
+
+              #hero {
+                padding-top: 0;
+              }
+
+              #meet-josh {
+                flex-direction: column;
+                align-items: center;
+              }
+              #meet-josh h2 {
+                text-align: center;
+              }
+              #meet-josh div img {
+                max-width: 100vw;
+                aspect-ratio: 1;
+                height: auto !important;
+              }
+
+              #testimonials ul {
+                grid-gap: 20px;
+                flex-direction: column;
+              }
+              #testimonials ul li {
+                width: 100%;
+              }
+
+              footer {
+                flex-direction: column;
+              }
+              footer > * {
+                width: 100%;
+                text-align: center !important;
+              }
+              footer h4 a {
+                display: block;
+              }
+            }
+
+        </style>
+    </head>
+
+
+    <body>
+        <header>
+            <h1>Unique Boston Real Estate</h1>
+            <ul>
+                <li class="desktop-only">
+                    <a href="#meet-josh" data-animation-role="header-element">Meet Josh</a>
+                </li>
+                <li class="desktop-only">
+                    <a href="#listings" data-animation-role="header-element">Listings</a>
+                </li>
+                <li class="desktop-only">
+                    <a href="#testimonials" data-animation-role="header-element">Testimonials</a>
+                </li>
+                <li>
+                    <a class="icon icon--fill  header-icon header-icon-border-shape-none header-icon-border-style-outline" href="https://www.linkedin.com/in/joshuakonoff8/" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="23 23 64 64">
+                            <use xlink:href="#linkedin-unauth-icon" width="110" height="110"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon icon--fill  header-icon header-icon-border-shape-none header-icon-border-style-outline" href="https://www.instagram.com/uniquebostonre/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="23 23 64 64">
+                        <use xlink:href="#instagram-unauth-icon" width="110" height="110"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn--border theme-btn--primary-inverse sqs-button-element--primary" href="mailto:joshk@modernre.com?subject=Contact%20Josh%20from%20his%20website&body=Here's%20a%20little%20about%20what%20I'm%20looking%20for...%0A%0AName%3A%0A%0AEmail%3A%0A%0APets%3A%0A%0AOccupation%3A%0A%0AApproximate%20Yearly%20Income%3A%0A%0ACredit%20Score%3A%0A%0AMessage%3A">
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+
+        <section id="hero">
+            <h2 style="white-space:pre-wrap;">No one knows<br>your real estate needs<br>better than you.</h2>
+            <p class="sqsrte-large" style="white-space:pre-wrap;">Let’s talk about them, and find the best fit for you.</p>
+            <a href="mailto:joshk@modernre.com?subject=Contact%20Josh%20from%20his%20website&body=Here's%20a%20little%20about%20what%20I'm%20looking%20for...%0A%0AName%3A%0A%0AEmail%3A%0A%0APets%3A%0A%0AOccupation%3A%0A%0AApproximate%20Yearly%20Income%3A%0A%0ACredit%20Score%3A%0A%0AMessage%3A" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">
+                Request to work with Josh
+              </a>
+        </section>
+
+
+
+        <section id="quote">
+            <h3 style="text-align:center;white-space:pre-wrap;">“The Boston real estate process is a hassle. I feel your pain. I still remember when I moved to Boston about 16 years ago. With more than 8 years of Boston real estate experience, I’m here to walk you through the whole process. When I’m working with you priority number one: make the process hassle-free for you.”</h3>
+        </section>
+
+
+        <section id="meet-josh">
+            <div>
+                <img alt="" loading="lazy" data-stretch="false" style="object-fit: cover; object-position: calc(50%) calc(50%); left: -3.61538px; top: 0px; width: 289.231px; height: 282px; position: relative;" data-parent-ratio="1.0" class="loaded" data-image-resolution="300w" src="images/josh_suit.jpg">
+            </div>
+            <div>
+                <h2 style="white-space:pre-wrap;">Meet Josh</h2>
+                <p class="" style="white-space:pre-wrap;">Josh Konoff is a seasoned real estate specialist with more than 8 years of experience. He is dedicated to building long-term relationships with clients and their referrals.&nbsp; He has lived in the Allston-Brookline-Brighton area for 16 years.</p>
+                <p class="" style="white-space:pre-wrap;">Josh is also the entrepreneur and Executive Director of the Boston Volunteers, one of Boston’s fastest growing nonprofits.</p>
+                <p class="" style="white-space:pre-wrap;padding-left:2em;">Fun facts about the Boston Volunteers:</p>
+                <ul style="padding-left: 5em;">
+                    <li>
+                        <p class="" style="white-space:pre-wrap;">Connecting and creating community since 2008</p>
+                    </li>
+                    <li>
+                        <p class="" style="white-space:pre-wrap;">Partners with Amazon and local companies</p>
+                    </li>
+                    <li>
+                        <p class="" style="white-space:pre-wrap;">Learn more: <a target="_blank" href="https://www.bostonvolunteer.org/">www.BostonVolunteer.org</a></p>
+                    </li>
+                </ul>
+                <p class="" style="white-space:pre-wrap;">Josh met his wife, Autumn, while both studied at Boston University. His favorite hobbies are entrepreneurship, adventures in nature, and reading a book in Spanish and Chinese. In his spare time Josh enjoys working on data science projects. His favorite books are <em>War and Peace</em> and <em>Atomic Habits</em>. Josh and his wife still live next to BU.</p>
+                <p><a href="mailto:joshk@modernre.com?subject=Contact%20Josh%20from%20his%20website&body=Here's%20a%20little%20about%20what%20I'm%20looking%20for...%0A%0AName%3A%0A%0AEmail%3A%0A%0APets%3A%0A%0AOccupation%3A%0A%0AApproximate%20Yearly%20Income%3A%0A%0ACredit%20Score%3A%0A%0AMessage%3A" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">
+                  Request to work with Josh
+                </a></p>
+            </div>
+
+        </section>
+
+
+        <section id="listings">
+            <h2 style="text-align:center;white-space:pre-wrap;">Listings</h2>
+            <div class="sqs-block-content">
+                <style>
+                    #myIframe {
+                    height:calc(80vh - 115px);
+                    }
+              </style>
+              <iframe id="myIframe" frameborder="0" width="100%" src="https://www.yougotlistings.com/client/idx?agency_id=226"></iframe>
+            </div>
+            <a href="mailto:joshk@modernre.com?subject=Contact%20Josh%20from%20his%20website&body=Here's%20a%20little%20about%20what%20I'm%20looking%20for...%0A%0AName%3A%0A%0AEmail%3A%0A%0APets%3A%0A%0AOccupation%3A%0A%0AApproximate%20Yearly%20Income%3A%0A%0ACredit%20Score%3A%0A%0AMessage%3A" class="sqs-block-button-element--medium sqs-button-element--primary sqs-block-button-element" data-initialized="true">
+                Request to work with Josh
+            </a>
+        </section>
+
+
+
+        <section id="testimonials">
+            <ul class="user-items-list-carousel__slides user-items-list-carousel__slides--initialized" style="grid-gap: 20px;">
+              <li class="
+                user-items-list-carousel__slide list-item
+                
+                  list-item-basic-animation
+                
+              " style="padding: 10%; transform: translate3d(0px, 0px, 0px);" data-is-card-enabled="true">
+            
+              
+                  <div class="user-items-list-carousel__media-container" style="
+                      margin-bottom: 40px;
+                      width: 30%;
+                    ">
+                    <div class="user-items-list-carousel__media-inner" data-media-aspect-ratio="circle" data-animation-role="image">
+                      <img alt="" class="user-items-list-carousel__media" data-load="false" data-mode="cover" data-use-advanced-positioning="true" style="width: 100%; height: 100%; object-fit: cover;" data-parent-ratio="1.0" data-image-resolution="300w" src="images/unique-boston-real-estate-madeleine.jpg" data-loaded="true">
+                    </div>
+                  </div>
+              
+            
+            <div class="list-item-content">
+
+              
+                <div class="list-item-content__text-wrapper">
+
+                  
+                    <h2 class="list-item-content__title" style="max-width: 100%;">"We had an extraordinary experience with Josh K in finding our first apartment in Boston.. We had less than a month to relocate to the city, and Josh took a fresh approach that focused on understanding the person.. After listening to our specific needs, Josh was able to show us unique apartments and walk us through the whole process from researching to signing our lease. "</h2>
+                  
+
+                  
+                      <div class="list-item-content__description
+                        
+                        " style="
+                          margin-top: 10px;
+                          max-width: 100%;
+                        "><p class="" style="white-space:pre-wrap;">Madeleine </p></div>
+                  
+
+                </div>
+              
+
+              
+
+            </div>
+          </li>
+          <li class="
+                user-items-list-carousel__slide list-item
+                
+                  list-item-basic-animation
+                
+              " style="padding: 10%; transform: translate3d(721px, 0px, 0px);" data-is-card-enabled="true">
+            
+              
+                  <div class="user-items-list-carousel__media-container" style="
+                      margin-bottom: 40px;
+                      width: 30%;
+                    ">
+                    <div class="user-items-list-carousel__media-inner" data-media-aspect-ratio="circle" data-animation-role="image">
+                      <img alt="" class="user-items-list-carousel__media" data-load="false" data-mode="cover" data-use-advanced-positioning="true" style="width: 100%; height: 100%; object-fit: cover;" data-parent-ratio="1.0" data-image-resolution="300w" src="images/unique-boston-real-estate-dan.jpg" data-loaded="true">
+                    </div>
+                  </div>
+              
+            
+            <div class="list-item-content">
+
+              
+                <div class="list-item-content__text-wrapper">
+
+                  
+                    <h2 class="list-item-content__title" style="max-width: 100%;">“Josh is reliable, dedicated, and excellent with communication.. His natural talent for real estate, professional experience, as well as his relationships with local landlords allowed us to save time and find an apartment we were more than satisfied with.. We felt respected and would work with him again any time.. If you're looking for a hassle-free real estate experience, then we highly recommend.” </h2>
+                  
+
+                  
+                      <div class="list-item-content__description
+                        
+                        " style="
+                          margin-top: 10px;
+                          max-width: 100%;
+                        "><p class="" style="white-space:pre-wrap;">Dan</p></div>
+                  
+
+                </div>
+              
+
+              
+
+            </div>
+          </li>
+        </ul>
+        </section>
+
+
+
+        <section id="contact">
+            <div class="sqs-block-content">
+
+                <h2 style="white-space:pre-wrap;">Contact us.</h2>
+                <p>
+                  <a href="mailto:joshk@modernre.com?subject=Contact%20Josh%20from%20his%20website&body=Here's%20a%20little%20about%20what%20I'm%20looking%20for...%0A%0AName%3A%0A%0AEmail%3A%0A%0APets%3A%0A%0AOccupation%3A%0A%0AApproximate%20Yearly%20Income%3A%0A%0ACredit%20Score%3A%0A%0AMessage%3A">joshk@modernre.com</a><br><a href="tel:+16172337737">(617) 233-7737</a></p>
+                <p class="" style="white-space:pre-wrap;">141 Brighton Ave.<br>Allston, MA 02134<br></p>
+                <p>Please tell us what you’re looking for.</p>
+                <nav class="sqs-svg-icon--list">
+                    <a href="https://www.linkedin.com/in/joshuakonoff8/" target="_blank" class="sqs-svg-icon--wrapper linkedin-unauth" aria-label="LinkedIn">
+                      <div>
+                        <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                          <use class="sqs-use--icon" xlink:href="#linkedin-unauth-icon"></use>
+                        </svg>
+                      </div>
+                    </a><a href="https://www.instagram.com/uniquebostonre/" target="_blank" class="sqs-svg-icon--wrapper instagram-unauth" aria-label="Instagram">
+                      <div>
+                        <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                          <use class="sqs-use--icon" xlink:href="#instagram-unauth-icon"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </nav>
+                
+            </div>
+            
+
+              <!--<div class="form-wrapper">
+                <p>Please tell us a little about what you're looking for.</p>
+                <div class="form-inner-wrapper">
+                  <form data-form-id="6376b9168f2c9072efefe7e5" data-success-redirect="" data-dynamic-strings="" autocomplete="on" method="POST" action="https://round-mayflower-rxsc.squarespace.com" novalidate="" onsubmit="return (function (form) {
+                Y.use('squarespace-form-submit', 'node', function usingFormSubmit(Y) {
+                  (new Y.Squarespace.FormSubmit(form)).submit({
+                    formId: '6376b9168f2c9072efefe7e5',
+                    collectionId: '6376943f6865134ff7864c84',
+                    objectName: '87292bf23138de4c3e51'
+                  });
+                });
+                return false;
+              })(this);">
+                    
+                      <div class="field-list clear">
+                          
+                            <fieldset id="name-yui_3_17_2_1_1553888888520_3744" class="form-item fields name required">
+                              
+                          <legend class="title">
+                            Name
+                            
+                              <span class="required" aria-hidden="true">*</span>
+                            
+                          </legend>
+                        
+                              
+                              <div class="field first-name">
+                                <label class="caption">
+                                  <input class="field-element field-control" name="fname" x-autocompletetype="given-name" type="text" spellcheck="false" maxlength="30" data-title="First" aria-required="true">
+                                  <span class="caption-text">First Name</span>
+                                </label>
+                              </div>
+                              <div class="field last-name">
+                                <label class="caption">
+                                  <input class="field-element field-control" name="lname" x-autocompletetype="surname" type="text" spellcheck="false" maxlength="30" data-title="Last" aria-required="true">
+                                  <span class="caption-text">Last Name</span>
+                                </label>
+                              </div>
+                            </fieldset>
+                          
+                            <div id="email-yui_3_17_2_1_1553888888520_3745" class="form-item field email required">
+                              
+                          <label class="title" for="email-yui_3_17_2_1_1553888888520_3745-field">
+                            Email
+                            
+                              <span class="required" aria-hidden="true">*</span>
+                            
+                          </label>
+                        
+                              
+                              <input class="field-element" id="email-yui_3_17_2_1_1553888888520_3745-field" name="email" type="email" autocomplete="email" spellcheck="false" aria-required="true">
+                            </div>
+                          
+                            <div id="textarea-yui_3_17_2_1_1553888888520_3747" class="form-item field textarea required">
+                              
+                          <label class="title" for="textarea-yui_3_17_2_1_1553888888520_3747-field">
+                            Message
+                            
+                              <span class="required" aria-hidden="true">*</span>
+                            
+                          </label>
+                        
+                              
+                              <textarea class="field-element " id="textarea-yui_3_17_2_1_1553888888520_3747-field" aria-required="true"></textarea>
+                            </div>
+                          
+                            <fieldset id="checkbox-59d3184e-24c7-4aa9-97a2-38dc3ce2cdde" class="form-item field checkbox required" aria-required="true">
+                              
+                          <legend class="title">
+                            Pets
+                            
+                              <span class="required" aria-hidden="true">*</span>
+                            
+                          </legend>
+                              <div class="option"><label><input type="checkbox" name="checkbox-59d3184e-24c7-4aa9-97a2-38dc3ce2cdde-field" value="Dog"> Dog</label></div>
+                              
+                              <div class="option"><label><input type="checkbox" name="checkbox-59d3184e-24c7-4aa9-97a2-38dc3ce2cdde-field" value="Cat"> Cat</label></div>
+                              
+                              <div class="option"><label><input type="checkbox" name="checkbox-59d3184e-24c7-4aa9-97a2-38dc3ce2cdde-field" value="None"> None</label></div>
+                              
+                            </fieldset>
+                            <fieldset id="radio-a7e25785-9193-41b5-be6f-89da8c684918" class="form-item field radio">
+                              
+                          <legend class="title">
+                            Occupation
+                            
+                          </legend>
+                                <div class="option"><label><input type="radio" name="radio-a7e25785-9193-41b5-be6f-89da8c684918-field" value="Professional"> Professional</label></div>
+                              
+                                <div class="option"><label><input type="radio" name="radio-a7e25785-9193-41b5-be6f-89da8c684918-field" value="Undergrad"> Undergrad</label></div>
+                              
+                                <div class="option"><label><input type="radio" name="radio-a7e25785-9193-41b5-be6f-89da8c684918-field" value="Grad"> Grad</label></div>
+                              
+                            </fieldset>
+                            <div id="select-9aff79bd-e78e-4e56-9430-36b472df55e5" class="form-item field select required">
+                              
+                          <label class="title" for="select-9aff79bd-e78e-4e56-9430-36b472df55e5-field">
+                            Yearly earning
+                            
+                              <span class="required" aria-hidden="true">*</span>
+                            
+                          </label>
+                              <select id="select-9aff79bd-e78e-4e56-9430-36b472df55e5-field" name="select-9aff79bd-e78e-4e56-9430-36b472df55e5-field" aria-required="true">
+                                
+                                  <option value="above $100,000">above $100,000</option>
+                                
+                                  <option value="$75,000 - $100,000">$75,000 - $100,000</option>
+                                
+                                  <option value="$50,000 - $74,999">$50,000 - $74,999</option>
+                                
+                                  <option value="$25,000 - $49,999">$25,000 - $49,999</option>
+                                
+                                  <option value="below $25,000">below $25,000</option>
+                                
+                                <optgroup label=""></optgroup>
+                              </select>
+                            </div>
+                            <div id="select-76537e8a-09cd-4942-b030-630e5aad84f0" class="form-item field select">
+                              
+                          <label class="title" for="select-76537e8a-09cd-4942-b030-630e5aad84f0-field">
+                            Credit Score
+                            
+                          </label>
+                              
+                              <select id="select-76537e8a-09cd-4942-b030-630e5aad84f0-field" name="select-76537e8a-09cd-4942-b030-630e5aad84f0-field">
+                                
+                                  <option value="< 600">&lt; 600</option>
+                                
+                                  <option value="600 - 650">600 - 650</option>
+                                
+                                  <option value="650 - 700">650 - 700</option>
+                                
+                                  <option value="700 +">700 +</option>
+                                
+                                <optgroup label=""></optgroup>
+                              </select>
+                            </div>
+                      </div>
+                    <div data-animation-role="button" class="
+                        form-button-wrapper
+                        
+                          form-button-wrapper--align-left
+                        
+                      ">
+                      <input class="button sqs-system-button sqs-editable-button sqs-button-element--primary" type="submit" value="Send">
+                    </div>
+                    <div class="hidden form-submission-text">Thank you!</div>
+                    <div class="hidden form-submission-html" data-submission-html=""></div>
+                  </form>
+                </div>
+              </div>-->
+        </section>
+
+
+        <footer>
+            <h2>Unique Boston Real Estate</h2>
+              <h4 style="text-align:right;">
+                <a href="mailto:joshk@modernre.com?subject=Contact%20Josh%20from%20his%20website&body=Here's%20a%20little%20about%20what%20I'm%20looking%20for...%0A%0AName%3A%0A%0AEmail%3A%0A%0APets%3A%0A%0AOccupation%3A%0A%0AApproximate%20Yearly%20Income%3A%0A%0ACredit%20Score%3A%0A%0AMessage%3A">joshk@modernre.com</a>
+            </h4>
+        </footer>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg">
+            <symbol id="linkedin-unauth-icon" viewBox="0 0 64 64"><path fill="currentColor" d="M20.4,44h5.4V26.6h-5.4V44z M23.1,18c-1.7,0-3.1,1.4-3.1,3.1c0,1.7,1.4,3.1,3.1,3.1 c1.7,0,3.1-1.4,3.1-3.1C26.2,19.4,24.8,18,23.1,18z M39.5,26.2c-2.6,0-4.4,1.4-5.1,2.8h-0.1v-2.4h-5.2V44h5.4v-8.6 c0-2.3,0.4-4.5,3.2-4.5c2.8,0,2.8,2.6,2.8,4.6V44H46v-9.5C46,29.8,45,26.2,39.5,26.2z"></path></symbol>
+            <symbol id="instagram-unauth-icon" viewBox="0 0 64 64"><path fill="currentColor" d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z"></path></symbol>
+        </svg>
+    </body>
+</html>
